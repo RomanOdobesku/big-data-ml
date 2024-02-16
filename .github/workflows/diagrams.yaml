@@ -1,0 +1,37 @@
+name: Create diagrams
+
+on: [push]
+
+jobs:
+  run-scripts:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10.13'
+
+    - name: Install Graphviz
+      run: sudo apt-get install -y graphviz
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Python scripts
+      run: |
+        for script in ./src/diagrams/*.py; do
+          python "$script"
+        done
+
+    - name: Commit and push if changed
+      run: |
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git add ./docs/.png/*.png
+        git commit -m "Automatically updated diagrams" || echo "No changes to commit"
+        git push
