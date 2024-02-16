@@ -20,24 +20,24 @@
 - **Финансовая выгода**: Положительная динамика доходности портфелей пользователей.
 
 ## Use Cases
-![Use Cases](./.png/use_case.png)
+![Use Cases](./use_case.png)
 
 ## C4
 
 ### Context
-![Context](./.png/c4_context.png)
+![Context](./c4_context.png)
 
 ### Containers
-![Containers](./.png/c4_containers.png)
+![Containers](./c4_containers.png)
 
 ### Application API Components
-![Application API Components](./.png/c4_api_components.png)
+![Application API Components](./c4_api_components.png)
 
 ### ML Components
-![ML Components](./.png/c4_ml_components.png)
+![ML Components](./c4_ml_components.png)
 
 ### Analytics Components
-![Analytics Components](./.png/c4_analytics_components.png)
+![Analytics Components](./c4_analytics_components.png)
 
 ### Trading Components
-![Trading Components](./.png/c4_trading_components.png)
+![Trading Components](./c4_trading_components.png)
